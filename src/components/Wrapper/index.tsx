@@ -17,10 +17,7 @@ export const Wrapper = ({
   const Tag = as as any;
   return (
     <Tag
-      className={clsx(
-        `px-4 mx-auto max-w-screen-sm w-full md:max-w-screen-sl md:px-20`,
-        className
-      )}
+      className={clsx(`px-4 mx-auto w-full md:px-10`, className)}
       style={{ marginBottom: mb }}
       {...props}
     >

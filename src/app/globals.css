@@ -3,19 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --toastify-color-info: #eef2fa !important;
+  --toastify-color-success: #eefbf4 !important;
+  --toastify-color-warning: #fff7e0 !important;
+  --toastify-color-error: #fce4e1 !important;
+
+  --toastify-text-color-info: #2e5aac !important;
+  --toastify-text-color-success: #13b41a !important;
+  --toastify-text-color-warning: #d7b43a !important;
+  --toastify-text-color-error: #d22c2c !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+*::selection {
+  background: #fcd34d;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+button {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
