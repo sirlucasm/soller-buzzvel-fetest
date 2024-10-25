@@ -61,11 +61,11 @@ export const FinalListFeedbackContentDesktop = () => {
         </div>
       </section>
 
-      <section className="bg-secondary-400 w-full sl:px-72 px-20 py-20 hidden lg:flex flex-col justify-center gap-20 relative">
+      <section className="bg-secondary-400 w-full sl:px-72 px-20 pt-20 pb-6 hidden lg:flex flex-col justify-center gap-20 relative">
         <div className="flex justify-between">
-          <div className="flex flex-col max-w-[894px] z-20">
+          <div className="flex flex-col max-w-[894px] z-20 gap-2">
             <h3 className="text-primary font-medium leading-[22px] text-xl">Get the Sun to power your home</h3>
-            <div className="flex flex-col gap-6 mt-2">
+            <div className="flex flex-col gap-6">
               <h1 className="font-extrabold text-[56px] leading-[61.6px] text-white">
                 All the power that you need for your house is now available
               </h1>
@@ -78,11 +78,11 @@ export const FinalListFeedbackContentDesktop = () => {
               className="drag-none"
             />
           </div>
-          <div className="flex flex-col items-center z-20 relative right-20 sl:-right-32">
+          <div className="flex flex-col items-center z-20 relative right-20 sl:-right-32 gap-4">
             <Button rightIcon={<ArrowRightIcon />} className="mt-6">
               Request a Quote
             </Button>
-            <span className="text-white leading-[22.4px] mt-4">Egestas fringilla aliquam leo</span>
+            <span className="text-white leading-[28.8px]">Egestas fringilla aliquam leo</span>
           </div>
         </div>
         <Image src={MacbookDesktopImage} alt="MacbookDesktopImage" className="self-center z-20 drag-none" />
