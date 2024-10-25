@@ -19,16 +19,24 @@ export const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex items-center gap-4">
             <li className="p-2">
-              <Link href={routes.public.home.root}>Products</Link>
+              <Link href={routes.public.home.root} className="hover:text-font-400 transition-[.3s] hover:font-semibold">
+                Products
+              </Link>
             </li>
             <li className="p-2">
-              <Link href={routes.public.home.root}>Solutions</Link>
+              <Link href={routes.public.home.root} className="hover:text-font-400 transition-[.3s] hover:font-semibold">
+                Solutions
+              </Link>
             </li>
             <li className="p-2">
-              <Link href={routes.public.home.root}>Services</Link>
+              <Link href={routes.public.home.root} className="hover:text-font-400 transition-[.3s] hover:font-semibold">
+                Services
+              </Link>
             </li>
             <li className="p-2">
-              <Link href={routes.public.home.root}>Configure</Link>
+              <Link href={routes.public.home.root} className="hover:text-font-400 transition-[.3s] hover:font-semibold">
+                Configure
+              </Link>
             </li>
           </ul>
         </nav>
