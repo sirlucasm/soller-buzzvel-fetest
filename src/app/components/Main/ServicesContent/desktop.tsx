@@ -10,7 +10,7 @@ export const ServicesContentDesktop = () => {
         <Image
           src={SmartphoneDashboardLeftDesktopImage}
           alt="SmartphoneDashboardMobileImage"
-          className="max-w-none w-[1146px] h-[1000px] -ml-[285px] drag-none"
+          className="max-w-none w-[1146px] h-[1000px] -ml-[325px] drag-none"
         />
         <div className="flex flex-col gap-32">
           <div>
@@ -100,7 +100,7 @@ export const ServicesContentDesktop = () => {
         <Image
           src={SmartphoneDashboardRightDesktopImage}
           alt="SmartphoneDashboardRightMobileImage"
-          className="max-w-none w-[1146px] h-[1000px] -mr-[300px] drag-none"
+          className="max-w-none w-[1146px] h-[1000px] -mr-[340px] drag-none"
         />
       </section>
     </>

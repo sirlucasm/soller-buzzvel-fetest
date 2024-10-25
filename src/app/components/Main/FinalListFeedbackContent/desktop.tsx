@@ -14,7 +14,7 @@ import { Button } from "@/components/Button"
 export const FinalListFeedbackContentDesktop = () => {
   return (
     <>
-      <section className="mt-[200px] bg-secondary w-full px-20 py-20 hidden lg:flex flex-col relative">
+      <section className="mt-[580px] xl:mt-[200px] bg-secondary w-full px-20 py-20 hidden lg:flex flex-col relative">
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <h3 className="text-primary text-xl font-medium leading-[22px]">Join other Sun harvesters</h3>

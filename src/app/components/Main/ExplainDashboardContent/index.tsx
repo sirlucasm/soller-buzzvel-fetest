@@ -27,17 +27,17 @@ export const ExplainDashboardContent = () => {
         <Image
           src={LeftCircleMobileImage}
           alt="LeftCircleMobileImage"
-          className="absolute left-0 -top-20 -ml-4 z-10 md:-ml-10"
+          className="absolute left-0 -top-20 -ml-4 z-10 md:-ml-20"
         />
         <Image
           src={DashboardMobileImage}
           alt="DashboardMobileImage"
-          className="absolute -mr-4 right-0 z-20 md:-mr-10"
+          className="absolute -mr-4 right-0 z-20 md:-mr-20"
         />
         <Image
           src={RightCircleMobileImage}
           alt="RightCircleMobileImage"
-          className="absolute right-0 -top-12 -mr-4 z-10 md:-mr-10"
+          className="absolute right-0 -top-12 -mr-4 z-10 md:-mr-20"
         />
       </div>
 
@@ -45,7 +45,7 @@ export const ExplainDashboardContent = () => {
         <Image
           src={CircleOrangeLeftDesktopImage}
           alt="CircleOrangeLeftDesktopImage"
-          className="drag-none absolute left-0 -top-32 z-10 -ml-10"
+          className="drag-none absolute left-0 -top-32 z-10 -ml-20"
         />
         <Image
           src={DashboardDesktopImage}
@@ -57,7 +57,7 @@ export const ExplainDashboardContent = () => {
         <Image
           src={CircleSecondaryRightDesktopImage}
           alt="CircleSecondaryRightDesktopImage"
-          className="drag-none absolute right-0 top-12 z-10 -mr-10"
+          className="drag-none absolute right-0 top-12 z-10 -mr-20"
         />
       </div>
     </>

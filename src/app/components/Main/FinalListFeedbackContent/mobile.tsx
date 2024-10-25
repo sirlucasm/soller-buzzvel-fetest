@@ -11,7 +11,7 @@ import { Button } from "@/components/Button"
 
 export const FinalListFeedbackContentMobile = () => {
   return (
-    <section className="mt-[580px] bg-secondary w-full px-4 py-10 flex flex-col relative md:hidden">
+    <section className="mt-[580px] bg-secondary w-full px-4 py-10 flex flex-col relative lg:hidden">
       <div className="flex flex-col text-center items-center">
         <h3 className="text-primary font-medium leading-[16.6px]">Join other Sun harvesters</h3>
         <div className="flex flex-col gap-6 mt-2">
