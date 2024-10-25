@@ -4,6 +4,7 @@ import { RobotoFont } from "@/styles/fonts"
 import { cn } from "@/utils/cn"
 
 import "./globals.css"
+import { Providers } from "./providers"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(RobotoFont.className, "bg-neutral-foreground text-font-default")}>{children}</body>
+      <body className={cn(RobotoFont.className, "bg-neutral-foreground text-font-default")}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

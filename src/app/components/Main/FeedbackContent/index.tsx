@@ -4,7 +4,7 @@ import { Avatar } from "@/components/Avatar"
 
 export const FeedbackContent = () => {
   return (
-    <div className="mt-20 md:max-w-[600px] z-20 relative">
+    <div data-aos="fade-up" className="mt-20 md:max-w-[600px] z-20 relative">
       <p className="leading-[22.4px]">
         “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque
         faucibus.”
