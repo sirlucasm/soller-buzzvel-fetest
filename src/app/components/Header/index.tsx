@@ -1,17 +1,17 @@
-import { Wrapper } from "@/components/Wrapper";
-import routes from "@/constants/routes";
-import Image from "next/image";
-import Link from "next/link";
-import HeadsetIcon from "@/assets/icons/headset.svg";
-import { Button } from "@/components/Button";
-import { ArrowRightIcon } from "lucide-react";
+import Image from "next/image"
+import Link from "next/link"
+
+import { ArrowRightIcon } from "lucide-react"
+
+import HeadsetIcon from "@/assets/icons/headset.svg"
+import routes from "@/constants/routes"
+
+import { Button } from "@/components/Button"
+import { Wrapper } from "@/components/Wrapper"
 
 export const Header = () => {
   return (
-    <Wrapper
-      as="header"
-      className="flex items-center justify-between md:h-28 md:py-6 z-50"
-    >
+    <Wrapper as="header" className="flex items-center justify-between md:h-28 md:py-6 z-50 relative">
       <div className="flex items-center gap-[38px]">
         <Link href={routes.public.home.root} className="font-bold text-[32px]">
           soller
@@ -45,5 +45,5 @@ export const Header = () => {
         </Button>
       </div>
     </Wrapper>
-  );
-};
+  )
+}
