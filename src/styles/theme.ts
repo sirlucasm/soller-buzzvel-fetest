@@ -14,14 +14,14 @@ export const theme = {
       900: "#78350F",
       foreground: "#FFFFFF",
       default: "#FCD34D",
-      DEFAULT: "#FCD34D",
+      DEFAULT: "#FCD34D"
     },
     secondary: {
       50: "#F3E8FB",
       100: "#E2CBF7",
       200: "#C49AF0",
       300: "#A86BE7",
-      400: "#8D41DD",
+      400: "#7E22CE",
       500: "#7221C2",
       600: "#5D1A9E",
       700: "#581C87",
@@ -29,7 +29,7 @@ export const theme = {
       900: "#370E56",
       foreground: "#FFFFFF",
       default: "#581C87",
-      DEFAULT: "#581C87",
+      DEFAULT: "#581C87"
     },
     font: {
       50: "#E6EBF4",
@@ -44,7 +44,7 @@ export const theme = {
       900: "#000E2A",
       foreground: "#FFFFFF",
       default: "#0F172A",
-      DEFAULT: "#0F172A",
+      DEFAULT: "#0F172A"
     },
     neutral: {
       50: "#C1C1C1",
@@ -59,19 +59,19 @@ export const theme = {
       900: "#050500",
       foreground: "#FFFFFF",
       default: "#050500",
-      DEFAULT: "#050500",
+      DEFAULT: "#050500"
     },
     states: {
       success: "#13B41A",
       alert: "#D7B43A",
       error: "#D22C2C",
-      info: "#0369A1",
+      info: "#0369A1"
     },
     statesBg: {
       success: "#EEFBF4",
       alert: "#FEF9EC",
       error: "#FDEFED",
-      info: "#EEF2FA",
-    },
-  },
-};
+      info: "#EEF2FA"
+    }
+  }
+}
