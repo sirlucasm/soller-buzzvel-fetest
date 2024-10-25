@@ -1,12 +1,12 @@
 import Image from "next/image"
 
-import SmartphoneDashboardMobileImage from "@/assets/images/smartphone-dashboard-left-mobile.svg"
+import SmartphoneDashboardLeftMobileImage from "@/assets/images/smartphone-dashboard-left-mobile.svg"
 import SmartphoneDashboardRightMobileImage from "@/assets/images/smartphone-dashboard-right-mobile-2.svg"
 
 export const ServicesContentMobile = () => {
   return (
     <>
-      <section className="mt-[400px] flex flex-col text-center items-center xl:hidden">
+      <section data-aos="fade-down" className="mt-[400px] flex flex-col text-center items-center xl:hidden">
         <h3 className="text-primary-850 font-medium leading-[16.6px]">Services</h3>
         <div className="flex flex-col gap-6 mt-2">
           <h1 className="font-bold text-[32px] leading-[35.2px]">Personalized services</h1>
@@ -17,7 +17,7 @@ export const ServicesContentMobile = () => {
         </div>
       </section>
 
-      <section className="mt-28 flex flex-col gap-10 xl:hidden">
+      <section data-aos="fade-up" className="mt-28 flex flex-col gap-10 xl:hidden">
         <div className="grid grid-cols-2 gap-10">
           <div className="flex flex-col items-center gap-4 text-center">
             <h3 className="font-medium text-xl leading-[22px]">Et mauris</h3>
@@ -46,14 +46,15 @@ export const ServicesContentMobile = () => {
         </div>
         <div>
           <Image
-            src={SmartphoneDashboardMobileImage}
+            data-aos="fade-right"
+            src={SmartphoneDashboardLeftMobileImage}
             alt="SmartphoneDashboardMobileImage"
             className="max-w-none w-[599px] h-[523px] -ml-[260px]"
           />
         </div>
       </section>
 
-      <section className="mt-20 flex flex-col text-center items-center xl:hidden">
+      <section data-aos="fade-down" className="mt-20 flex flex-col text-center items-center xl:hidden">
         <h3 className="text-primary-850 font-medium leading-[16.6px]">Services</h3>
         <div className="flex flex-col gap-6 mt-2">
           <h1 className="font-bold text-[32px] leading-[35.2px]">Personalized services</h1>
@@ -64,7 +65,7 @@ export const ServicesContentMobile = () => {
         </div>
       </section>
 
-      <section className="mt-28 flex flex-col gap-10 xl:hidden">
+      <section data-aos="fade-up" className="mt-28 flex flex-col gap-10 xl:hidden">
         <div className="grid grid-cols-2 gap-10">
           <div className="flex flex-col items-center gap-4 text-center">
             <h3 className="font-medium text-xl leading-[22px]">Et mauris</h3>
@@ -93,6 +94,7 @@ export const ServicesContentMobile = () => {
         </div>
         <div>
           <Image
+            data-aos="fade-left"
             src={SmartphoneDashboardRightMobileImage}
             alt="SmartphoneDashboardRightMobileImage"
             className="absolute right-0"

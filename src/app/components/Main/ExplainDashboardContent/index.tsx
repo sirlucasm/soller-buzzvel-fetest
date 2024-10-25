@@ -10,7 +10,7 @@ import RightCircleMobileImage from "@/assets/images/right-circle-mobile.png"
 export const ExplainDashboardContent = () => {
   return (
     <>
-      <div className="mt-20 flex flex-col text-center items-center relative z-20">
+      <div data-aos="fade-down" className="mt-20 flex flex-col text-center items-center relative z-20">
         <div className="md:max-w-[900px]">
           <h3 className="text-primary-850 leading-[17.6px] font-medium lg:text-xl lg:leading-[22px]">No more waste</h3>
           <div className="flex flex-col gap-6 mt-2">

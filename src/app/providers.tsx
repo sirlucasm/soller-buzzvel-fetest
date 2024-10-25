@@ -10,7 +10,11 @@ interface Props {
 
 export const Providers = ({ children }: Props) => {
   useEffect(() => {
-    AOS.init()
+    AOS.init({
+      offset: 100,
+      duration: 1500,
+      once: true
+    })
   }, [])
 
   return <>{children}</>
