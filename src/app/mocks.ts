@@ -1,5 +1,7 @@
 import UserThumb1Image from "@/assets/images/user-thumb1.jpeg"
 import UserThumb2Image from "@/assets/images/user-thumb2.jpeg"
+import UserThumb3Image from "@/assets/images/user-thumb3.jpeg"
+import UserThumb4Image from "@/assets/images/user-thumb4.jpeg"
 
 export interface Feedback {
   review: string
@@ -17,7 +19,7 @@ export const feedbacks: Feedback[] = [
     user: {
       name: "Jane Cooper",
       consumption: "10KWh",
-      profileImage: UserThumb1Image
+      profileImage: UserThumb2Image
     }
   },
   {
@@ -26,7 +28,7 @@ export const feedbacks: Feedback[] = [
     user: {
       name: "Ralph Edwards",
       consumption: "32KWh",
-      profileImage: UserThumb2Image
+      profileImage: UserThumb3Image
     }
   },
   {
@@ -44,7 +46,7 @@ export const feedbacks: Feedback[] = [
     user: {
       name: "Cameron Williamson",
       consumption: "12KWh",
-      profileImage: UserThumb1Image
+      profileImage: UserThumb4Image
     }
   },
   {
@@ -53,7 +55,7 @@ export const feedbacks: Feedback[] = [
     user: {
       name: "Cameron Williamson",
       consumption: "12KWh",
-      profileImage: UserThumb1Image
+      profileImage: UserThumb4Image
     }
   }
 ]

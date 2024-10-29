@@ -30,7 +30,7 @@ export const FinalListFeedbackContentDesktop = () => {
             Request a Quote
           </Button>
         </div>
-        <div className="mt-20 flex items-center gap-6 overflow-x-auto">
+        <div className="mt-20 flex items-center gap-6 overflow-x-auto pb-4">
           {feedbacks.map((feedback, index) => {
             return (
               <div
