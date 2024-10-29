@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useRef } from "react"
+import { memo, useCallback, useRef } from "react"
 
 import Image from "next/image"
 
@@ -14,7 +14,7 @@ import { getWindowDimensions } from "@/utils/application"
 import { Avatar } from "@/components/Avatar"
 import { Button } from "@/components/Button"
 
-export const FinalListFeedbackContentMobile = () => {
+export const FinalListFeedbackContentMobile = memo(() => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = getWindowDimensions()
 
@@ -36,24 +36,24 @@ export const FinalListFeedbackContentMobile = () => {
     })
   }, [width])
 
-  console.log("width", width)
-
   return (
     <section className="mt-[580px] bg-secondary w-full px-4 py-10 flex flex-col relative lg:hidden">
       <div className="flex flex-col text-center items-center">
-        <h3 className="text-primary font-medium leading-[16.6px]">Join other Sun harvesters</h3>
-        <div className="flex flex-col gap-6 mt-2">
+        <h3 data-aos="fade-down" className="text-primary font-medium leading-[16.6px]">
+          Join other Sun harvesters
+        </h3>
+        <div data-aos="fade-up" className="flex flex-col gap-6 mt-2 items-center max-w-sm">
           <h1 className="font-bold text-[32px] leading-[35.2px] text-white">Make something awesome</h1>
           <p className="leading-[22.4px] max-w-[340px] text-white">
             Dui euismod iaculis libero, aliquet vitae et elementum porttitor. Eleifend mi tristique condimentum congue
             fusce nunc, donec magnis commodo.
           </p>
         </div>
-        <Button rightIcon={<ArrowRightIcon />} className="mt-6">
+        <Button data-aos="fade-up" rightIcon={<ArrowRightIcon />} className="mt-6">
           Request a Quote
         </Button>
       </div>
-      <div className="mt-20 flex items-center gap-6 overflow-x-auto pb-4" ref={scrollRef}>
+      <div data-aos="zoom-in" className="mt-20 flex items-center gap-6 overflow-x-auto pb-4" ref={scrollRef}>
         {feedbacks.map((feedback, index) => {
           return (
             <div className="flex flex-col p-8 justify-end bg-white h-[359px] min-w-full rounded-[10px]" key={index}>
@@ -78,16 +78,20 @@ export const FinalListFeedbackContentMobile = () => {
         </Button>
       </div>
       <div className="mt-24 flex flex-col text-center items-center">
-        <h3 className="text-primary font-medium leading-[16.6px]">Get the Sun to power your home</h3>
-        <div className="flex flex-col gap-6 mt-2">
+        <h3 data-aos="fade-down" className="text-primary font-medium leading-[16.6px]">
+          Get the Sun to power your home
+        </h3>
+        <div data-aos="fade-down" className="flex flex-col gap-6 mt-2 max-w-sm">
           <h1 className="font-bold text-[32px] leading-[35.2px] text-white">
             All the power that you need for your house is now available
           </h1>
         </div>
-        <Button rightIcon={<ArrowRightIcon />} className="mt-6">
+        <Button data-aos="fade-up" rightIcon={<ArrowRightIcon />} className="mt-6">
           Request a Quote
         </Button>
-        <span className="text-white leading-[22.4px] mt-4">Egestas fringilla aliquam leo</span>
+        <span data-aos="fade-up" className="text-white leading-[22.4px] mt-4">
+          Egestas fringilla aliquam leo
+        </span>
       </div>
       <div className="flex mt-14">
         <Image src={EllipseSecondaryImage} alt="EllipseSecondaryImage" className="absolute bottom-0 left-0 z-10" />
@@ -95,4 +99,4 @@ export const FinalListFeedbackContentMobile = () => {
       </div>
     </section>
   )
-}
+})

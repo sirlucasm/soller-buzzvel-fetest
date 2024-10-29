@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useMemo, useRef } from "react"
+import { memo, useCallback, useMemo, useRef } from "react"
 
 import Image from "next/image"
 
@@ -19,7 +19,7 @@ import { Button } from "@/components/Button"
 
 const FEEDBACK_ITEM_WIDTH = 364
 
-export const FinalListFeedbackContentDesktop = () => {
+export const FinalListFeedbackContentDesktop = memo(() => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { width } = getWindowDimensions()
 
@@ -47,7 +47,7 @@ export const FinalListFeedbackContentDesktop = () => {
     <>
       <section className="mt-[580px] xl:mt-[200px] bg-secondary w-full px-20 py-20 hidden lg:flex flex-col relative">
         <div className="flex items-center justify-between">
-          <div className="flex flex-col">
+          <div data-aos="fade-right" className="flex flex-col">
             <h3 className="text-primary text-xl font-medium leading-[22px]">Join other Sun harvesters</h3>
             <div className="flex flex-col gap-6 mt-2">
               <h1 className="font-extrabold text-[56px] leading-[61.6px] text-white">Make something awesome</h1>
@@ -57,16 +57,20 @@ export const FinalListFeedbackContentDesktop = () => {
               </p>
             </div>
           </div>
-          <Button rightIcon={<ArrowRightIcon />} className="mt-6">
+          <Button data-aos="fade-left" rightIcon={<ArrowRightIcon />} className="mt-6">
             Request a Quote
           </Button>
         </div>
-        <div className="mt-20 flex items-center gap-6 overflow-x-auto pb-4" ref={scrollRef}>
+        <div
+          data-aos="zoom-in"
+          className="mt-20 flex items-center gap-6 overflow-x-auto pb-2 h-[550px]"
+          ref={scrollRef}
+        >
           {feedbacks.map((feedback, index) => {
             return (
               <div
                 className={cn(
-                  `flex flex-col p-8 justify-end bg-white h-[442px] rounded-[10px] hover:h-[490px] hover:pb-14 duration-500`
+                  `flex flex-col p-8 justify-end bg-white h-[442px] rounded-[10px] hover:h-[490px] hover:pb-14 duration-300`
                 )}
                 style={{ minWidth: FEEDBACK_ITEM_WIDTH }}
                 key={index}
@@ -100,7 +104,7 @@ export const FinalListFeedbackContentDesktop = () => {
 
       <section className="bg-secondary-400 w-full sl:px-72 px-20 pt-20 pb-6 hidden lg:flex flex-col justify-center gap-20 relative">
         <div className="flex justify-between">
-          <div className="flex flex-col max-w-[894px] z-20 gap-2">
+          <div data-aos="fade-right" className="flex flex-col max-w-[894px] z-20 gap-2">
             <h3 className="text-primary font-medium leading-[22px] text-xl">Get the Sun to power your home</h3>
             <div className="flex flex-col gap-6">
               <h1 className="font-extrabold text-[56px] leading-[61.6px] text-white">
@@ -126,4 +130,4 @@ export const FinalListFeedbackContentDesktop = () => {
       </section>
     </>
   )
-}
+})
