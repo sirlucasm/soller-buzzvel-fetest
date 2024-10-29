@@ -28,5 +28,32 @@ export const feedbacks: Feedback[] = [
       consumption: "32KWh",
       profileImage: UserThumb2Image
     }
+  },
+  {
+    review:
+      "Viverra lacus suspendisse elit, adipiscing orci, non turpis etiam sapien. Viverra blandit sem neque pretium. Duis enim semper fermentum consequat aenean libero. Blandit porta leo condimentum dolor, nisi, aliquet ante laoreet.",
+    user: {
+      name: "Courtney Henry",
+      consumption: "6KWh",
+      profileImage: UserThumb1Image
+    }
+  },
+  {
+    review:
+      "Hendrerit augue ut nec, senectus quis integer netus. Sagittis fusce rhoncus magnis habitant amet amet. Egestas amet habitasse amet risus tellus ornare. Hendrerit augue ut nec, senectus. Mauris egestas feugiat leo vitae praesent neque, et.",
+    user: {
+      name: "Cameron Williamson",
+      consumption: "12KWh",
+      profileImage: UserThumb1Image
+    }
+  },
+  {
+    review:
+      "Hendrerit augue ut nec, senectus quis integer netus. Sagittis fusce rhoncus magnis habitant amet amet. Egestas amet habitasse amet risus tellus ornare. Hendrerit augue ut nec, senectus. Mauris egestas feugiat leo vitae praesent neque, et.",
+    user: {
+      name: "Cameron Williamson",
+      consumption: "12KWh",
+      profileImage: UserThumb1Image
+    }
   }
 ]

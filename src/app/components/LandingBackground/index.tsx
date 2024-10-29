@@ -10,7 +10,7 @@ export const LandingBackground = () => {
         <Image src={BgManWorkingMobileImage} alt="Man working mobile" />
       </div>
       <div data-aos="fade-in" className="hidden lg:block absolute right-0 top-0 z-10">
-        <Image src={BgManWorkingImage} alt="Man working" className="xl:w-auto xl:h-auto lg:w-[450px] lg:h-[475px]" />
+        <Image src={BgManWorkingImage} alt="Man working" className="xl:w-auto xl:h-auto lg:w-[450px]" />
       </div>
     </>
   )

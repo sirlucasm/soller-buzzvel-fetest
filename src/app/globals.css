@@ -14,6 +14,32 @@
   --toastify-text-color-error: #d22c2c !important;
 }
 
+body {
+  --sb-track-color: transparent;
+  --sb-thumb-color: #fcd34d;
+  --sb-size: 8px;
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 12px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

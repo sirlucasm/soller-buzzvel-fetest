@@ -2,11 +2,11 @@ import Image from "next/image"
 
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
 
+import { feedbacks } from "@/app/mocks"
 import CircleSecondaryRightDesktopImage from "@/assets/images/circle-secondary-right-desktop-2.svg"
 import EllipseSecondaryImage from "@/assets/images/ellipse-secondary.svg"
 import MacbookDesktopImage from "@/assets/images/macbook-desktop.svg"
 import MacbookImage from "@/assets/images/macbook.svg"
-import UserThumb2Image from "@/assets/images/user-thumb2.jpeg"
 
 import { Avatar } from "@/components/Avatar"
 import { Button } from "@/components/Button"
@@ -30,21 +30,24 @@ export const FinalListFeedbackContentDesktop = () => {
             Request a Quote
           </Button>
         </div>
-        <div className="mt-20">
-          <div className="flex flex-col p-8 justify-end bg-white h-[490px] w-[364px] rounded-[10px]">
-            <p className="leading-[28.8px] text-lg">
-              Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc
-              volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo
-              euismod.
-            </p>
-            <div className="flex items-center gap-4 mt-7">
-              <Avatar src={UserThumb2Image} size={64} />
-              <div className="flex flex-col">
-                <h3 className="text-lg leading-[28.8px]">Rwanda Melflor</h3>
-                <p className="text-font-300 leading-[22.4px]">10KWh</p>
+        <div className="mt-20 flex items-center gap-6 overflow-x-auto">
+          {feedbacks.map((feedback, index) => {
+            return (
+              <div
+                className="flex flex-col p-8 justify-end bg-white h-[490px] min-w-[364px] rounded-[10px]"
+                key={index}
+              >
+                <p className="leading-[28.8px] text-lg">{feedback.review}</p>
+                <div className="flex items-center gap-4 mt-7">
+                  <Avatar src={feedback.user.profileImage} size={64} />
+                  <div className="flex flex-col">
+                    <h3 className="text-lg leading-[28.8px]">{feedback.user.name}</h3>
+                    <p className="text-font-300 leading-[22.4px]">{feedback.user.consumption}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            )
+          })}
         </div>
         <div className="flex items-center mt-12 gap-6">
           <Button isIconOnly>
