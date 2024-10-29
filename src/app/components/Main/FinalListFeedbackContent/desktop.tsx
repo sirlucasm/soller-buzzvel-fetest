@@ -1,3 +1,7 @@
+"use client"
+
+import { useCallback, useMemo, useRef } from "react"
+
 import Image from "next/image"
 
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
@@ -7,11 +11,38 @@ import CircleSecondaryRightDesktopImage from "@/assets/images/circle-secondary-r
 import EllipseSecondaryImage from "@/assets/images/ellipse-secondary.svg"
 import MacbookDesktopImage from "@/assets/images/macbook-desktop.svg"
 import MacbookImage from "@/assets/images/macbook.svg"
+import { getWindowDimensions } from "@/utils/application"
+import { cn } from "@/utils/cn"
 
 import { Avatar } from "@/components/Avatar"
 import { Button } from "@/components/Button"
 
+const FEEDBACK_ITEM_WIDTH = 364
+
 export const FinalListFeedbackContentDesktop = () => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const { width } = getWindowDimensions()
+
+  const renderingFeedbackItemsCount = useMemo(() => Math.floor(width / FEEDBACK_ITEM_WIDTH), [width])
+
+  const handleNextPageFeedbackList = useCallback(() => {
+    if (!scrollRef.current) return
+
+    scrollRef.current.scroll({
+      left: scrollRef.current.scrollLeft + FEEDBACK_ITEM_WIDTH * renderingFeedbackItemsCount,
+      behavior: "smooth"
+    })
+  }, [renderingFeedbackItemsCount])
+
+  const handlePreviousFeedbackItemsCount = useCallback(() => {
+    if (!scrollRef.current) return
+
+    scrollRef.current.scroll({
+      left: scrollRef.current.scrollLeft - FEEDBACK_ITEM_WIDTH * renderingFeedbackItemsCount,
+      behavior: "smooth"
+    })
+  }, [renderingFeedbackItemsCount])
+
   return (
     <>
       <section className="mt-[580px] xl:mt-[200px] bg-secondary w-full px-20 py-20 hidden lg:flex flex-col relative">
@@ -30,11 +61,14 @@ export const FinalListFeedbackContentDesktop = () => {
             Request a Quote
           </Button>
         </div>
-        <div className="mt-20 flex items-center gap-6 overflow-x-auto pb-4">
+        <div className="mt-20 flex items-center gap-6 overflow-x-auto pb-4" ref={scrollRef}>
           {feedbacks.map((feedback, index) => {
             return (
               <div
-                className="flex flex-col p-8 justify-end bg-white h-[490px] min-w-[364px] rounded-[10px]"
+                className={cn(
+                  `flex flex-col p-8 justify-end bg-white h-[442px] rounded-[10px] hover:h-[490px] hover:pb-14 duration-500`
+                )}
+                style={{ minWidth: FEEDBACK_ITEM_WIDTH }}
                 key={index}
               >
                 <p className="leading-[28.8px] text-lg">{feedback.review}</p>
@@ -50,10 +84,10 @@ export const FinalListFeedbackContentDesktop = () => {
           })}
         </div>
         <div className="flex items-center mt-12 gap-6">
-          <Button isIconOnly>
+          <Button isIconOnly onClick={handlePreviousFeedbackItemsCount}>
             <ArrowLeftIcon />
           </Button>
-          <Button isIconOnly>
+          <Button isIconOnly onClick={handleNextPageFeedbackList}>
             <ArrowRightIcon />
           </Button>
         </div>
